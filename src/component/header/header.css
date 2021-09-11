@@ -168,6 +168,9 @@
     font-size: 1.7rem;
     position: relative;
 }
+.inf-item span svg{
+    margin-bottom: 6%;
+}
 .inf-item h3{
     margin-left: 6px;
     font-size: 1.1rem;

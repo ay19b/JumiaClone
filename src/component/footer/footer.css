@@ -47,7 +47,7 @@
     margin-left: 13%;
 }
 .input-inf button{
-    padding: 1%;
+    padding: 3%;
     margin-right: 15%;
     background-color: transparent;
     color: white;
@@ -119,8 +119,10 @@
         padding: 1% 1% 1% 23%;
         width: 5rem;
     }
+    .item-footer:first-child {
+        flex: 0.3 1;
+    }
     .item-footer:nth-child(3) {
-       flex: 0.2 1;
        display: none;
      }
     .btns {
