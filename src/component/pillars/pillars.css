@@ -1,0 +1,47 @@
+.pillars{
+    display: flex;
+    margin: 1% auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.pill-item {
+    display: flex;
+    background-color: white;
+    padding: 27px;
+    margin-right: 2%;
+    cursor: pointer;
+    position: relative;
+    flex-wrap: wrap;
+    flex: 0.3;
+}
+
+.pill-item img {
+    width: 18%;
+    position: absolute;
+    top: 5%;
+    left: 6%;
+}
+.pill-item h3 {
+    top: 22%;
+    position: absolute;
+    left: 28%;
+}
+
+@media screen and (max-width: 768px) {
+    .pill-item h3{
+        left: 38%;
+        font-size:0.8rem;
+    }
+    .pill-item img{
+        width: 24%;
+        height: 2rem;
+        top: 8%;
+        left: 6%;
+    }
+}
+@media screen and (max-width:480px) {
+    .pillars {
+        display: none;
+    }
+}

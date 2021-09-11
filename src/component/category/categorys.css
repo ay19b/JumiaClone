@@ -1,0 +1,152 @@
+
+.head-prod{
+    width: 90%;
+    margin: auto;
+    background-color: orange;
+    padding: 1%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-prod h2{
+    font-size: 1.4rem;
+    margin-left: 1%;
+}
+.head-prod-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.head-prod-right span a{
+    text-decoration: none;
+    color: black;
+}
+.head-prod-right svg {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 3%;
+}
+.head-prod span{
+    font-size: 1rem;
+}
+.category{
+    padding-bottom: 10%;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+}
+.product{
+    margin-top: 2%;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+    width: 10rem;
+    overflow: hidden;
+    text-align: center;
+    padding: 1%;
+    margin-bottom: 4%;
+}
+.product button{
+    background-color: orange;
+    border:none;
+    padding: 4%;
+    width:100%;
+    color: white;
+    font-size: Calc(8px + 1vw);
+    display:none;
+    cursor: pointer;
+    transition:1s;
+}
+.product:hover{
+    box-shadow: 0px 0px 9px 0px #ccc;
+}
+.product:hover button{
+    display:block;
+    transition:1s
+}
+
+.product a{
+    text-decoration: none;
+    color: black;
+}
+.product h2{
+    font-weight: 700;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 1rem;
+    white-space: nowrap;
+	letter-spacing: 2px;
+}
+.product img{
+    width: 100%;
+    height: 10rem;
+}
+.product:hover{
+    transform: scale(1.1,1.1);
+    outline: none;
+}
+
+@media screen and (max-width: 800px) {
+    .product h2{
+        font-size: 1.3rem;
+    }
+    .product{
+        width: 10rem;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .product{
+        width:10rem;
+    } 
+    .product h2{
+        font-size: 1.3rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 500px) {
+    .product{
+        width: 12rem;
+        height: 14rem;
+    } 
+    .products {
+      padding-bottom: 10%;
+    }
+    .product h2{
+        font-size: 0.9rem;
+    }
+    .head-prod h2 {
+        font-size: 1.2rem;
+        margin-left: 1%;
+    }
+    .head-prod span {
+        font-size: 0.8rem;
+    }
+    .head-prod-right svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 3%;
+    }
+  }
+
+  @media screen and (max-width: 444px){
+    .products{
+        justify-content: center;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .product img {
+        width: 100%;
+        height: 11rem;
+    }
+    
+  }
+ 
