@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import axios from 'axios';
 import Data from '../Library/stock';
 
 export const productSlice = createSlice({

@@ -15,7 +15,7 @@ import {Side} from "../data";
 import './header.css';
 
 
-function Header(){
+const Header = ({show}) => {
     const [clicked,setClicked]=useState(false);
     const product = useSelector(SelectProduct)
     const cartProducts = product.filter((product) => product.added);
@@ -41,7 +41,6 @@ const Sidebar=()=>{
                })}
             </div>
     )
-    
     }
 
 
@@ -52,7 +51,6 @@ useEffect(()=>{
         linksRef.current.style.display="block";
      }
 })
-
 
     return(
         <div className="header">
@@ -83,8 +81,7 @@ useEffect(()=>{
             <div className="header-last">
                 <div className="container">
 
-                <i className="menu fas fa-bars" onClick={()=>setShowSidebar(!ShowSidebar)} ></i>
-                 
+                <i className={!show?"menu fas fa-bars":null} onClick={()=>setShowSidebar(!ShowSidebar)} />
                 
 
                <div className="logo">

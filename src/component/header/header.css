@@ -67,7 +67,6 @@
     margin-right: 8px;
     cursor: pointer;
     transition:0.2s;
-    display:none;
 }
 .menu:active.sidebar{
     display:block !important;
@@ -76,11 +75,11 @@
     color:#f68b1e;
 }
 .sideBar{
-    width: 33vw;
+    width: 20vw;
     background-color: white;
     padding: 1%;
     position: absolute;
-    left: 5%;
+    left: 3.6%;
     z-index: 100;
     border-radius: 8px;
     transform: translate(-140%);
@@ -88,6 +87,15 @@
 }
 .active{
     transform: translate(0%);
+}
+.active::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid white;
 }
 .sideBar a{
     text-decoration: none;
@@ -218,6 +226,18 @@
     .search-inf span{
         margin-top:2px
     }
+    .sideBar {
+        width: 33vw;
+    }
+    .active::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid white;
+    }
   }
 
 @media screen and (max-width:480px){
@@ -226,6 +246,7 @@
 }
 .sideBar {
     width: 45vw;
+    left: 2.6%;
 }
 .info .inf-item span {
     font-size: 1.4rem;
@@ -237,6 +258,7 @@
 @media screen and (max-width:320px){
     .sideBar {
         width: 45vw;
+        left: 1.3%;
     }
     .awssld__wrapper {
         height: 65%;
@@ -263,9 +285,22 @@
         color: #bbb;
         margin-bottom: 7%;
     }
+    .search-inf span {
+        margin-top: 1px;
+    }
+    .search-inf span {
+        font-size: 1.1rem;
+    }
+    .search-inf input {
+        width: 16vw;
+        height: 16px;
+    }
+    .info .inf-item span {
+        font-size: 1.25rem;
+    }
 }
-  @media screen and (min-width: 768px) {
-    .sideBar{
+@media screen and (min-width:768px) {
+    .home .header .header-last .container .menu{
         display:none;
     }
-}  
+}

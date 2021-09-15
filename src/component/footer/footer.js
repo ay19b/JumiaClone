@@ -15,7 +15,7 @@ export default function Footer() {
                 <span>Subscribe to our communications to receive our best offers!</span>
                 <div className="input-inf">
                     <div className="input">
-                      <i class="fas fa-envelope"></i>
+                      <i className="fas fa-envelope"></i>
                       <input placeholder="Enter"/>
                     </div>
                     <div className="btns">

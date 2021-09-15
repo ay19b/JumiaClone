@@ -16,6 +16,7 @@ export const variablesSlice = createSlice({
       state.totalAmount = action.payload;
     },
   },
+  
 });
 
 export const selectTotalItems = (state) => state.variables.totalItems;

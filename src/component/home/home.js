@@ -10,7 +10,9 @@ import ReactLoading from "react-loading";
 
 export default function Home() {
     const [done, setDone] = useState(undefined);
+
     const Data=()=>{
+
         return(
         <div className="home">
           <Header />
