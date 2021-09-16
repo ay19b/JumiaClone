@@ -1,12 +1,9 @@
 import React from 'react'
-import { useDispatch,useSelector } from 'react-redux'
+import {useSelector } from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
-import Data from '../../Library/stock'
 import {Link} from 'react-router-dom'
-import {RiArrowDropRightLine} from "react-icons/ri"
 
 const Supermarket=()=> {
-    const dispatch = useDispatch();
    const products = useSelector(SelectProduct);
     return (
                  

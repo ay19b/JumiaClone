@@ -20,7 +20,6 @@ const Header = ({show}) => {
     const product = useSelector(SelectProduct)
     const cartProducts = product.filter((product) => product.added);
     const linksRef = useRef(null);
-    const side= useRef(null);
     const [ShowSidebar, setShowSidebar] = useState(false);
 
 const Sidebar=()=>{

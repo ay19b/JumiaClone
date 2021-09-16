@@ -11,7 +11,12 @@ import {add} from "../../features/productSlice"
 
 export default function DetailProd() {
   const [count, setCount] = useState(0);
-  const prod = useSelector(SelectProduct);;
+  const prod = useSelector(SelectProduct);
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const product = prod[id-1];
+
+
   useEffect(() => {
     setCount(JSON.parse(window.localStorage.getItem('count')));
   }, []);
@@ -19,10 +24,6 @@ export default function DetailProd() {
     window.localStorage.setItem('count', count);
   }, [count]);
   
-  const dispatch = useDispatch();
-  
-  const { id } = useParams();
-  const product = prod[id-1];
   
   let iconFull= <AiFillStar style={{color:"orange"}}/>
   const starEmpty = iconFull -5;

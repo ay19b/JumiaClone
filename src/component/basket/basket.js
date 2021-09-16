@@ -2,14 +2,13 @@ import React,{useEffect} from 'react'
 import './basket.css'
 import {Link} from 'react-router-dom';
 import { useSelector,useDispatch } from "react-redux";
-import {selectTotalItems,selectTotalAmount} from "../../features/variableSlice"
+import {selectTotalAmount} from "../../features/variableSlice"
 import {remove,incrementProduct,decrementProduct} from "../../features/productSlice"
 import {setTotalAmount} from "../../features/variableSlice"
 import {SelectProduct} from '../../features/productSlice'
 
 
 export default function Basket() {
-    let totalItems = useSelector(selectTotalItems);
     let totalAmount = useSelector(selectTotalAmount);
     const dispatch = useDispatch();
     const product = useSelector(SelectProduct)

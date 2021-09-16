@@ -2,12 +2,9 @@ import {RiArrowDropRightLine} from "react-icons/ri"
 import {Link} from 'react-router-dom';
 import {useSelector } from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
-import {useParams} from 'react-router-dom';
 
 export default function Category({cag,more}) {
-
    const products = useSelector(SelectProduct);
-   const { id } = useParams();
 
    return(
           <div className='category'>
@@ -21,7 +18,6 @@ export default function Category({cag,more}) {
                   </div>
               </div>
               <div className="products">
-               
                  {products
                     .filter((filter) => filter.category === cag)
                     .slice(0, 4)

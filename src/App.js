@@ -21,10 +21,10 @@ function App() {
   return (
     <div className="App">
          
-               <BrowserRouter basename={process.env.PUBLIC_URL}>
-               <>
+     <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <>
                
-              <Switch>
+           <Switch>
               
               <Route exact path={'/'} component={Home}>
                    <Home />
@@ -87,10 +87,10 @@ function App() {
                    <Footer />
                  </Route>
                  
-              </Switch>
+           </Switch>
               
-              </>
-               </BrowserRouter>
+          </>
+     </BrowserRouter>
     </div>
 
   );
