@@ -16,7 +16,7 @@ export default function DetailProd() {
   const { id } = useParams();
   const product = prod[id-1];
 
-
+  
   useEffect(() => {
     setCount(JSON.parse(window.localStorage.getItem('count')));
   }, []);
@@ -42,7 +42,7 @@ export default function DetailProd() {
                                </div>
                                <span>{product.price} DA</span>
                                <button className="btn-add" onClick={() => dispatch(add(product))}><HiOutlineShoppingCart />I BUY</button>
-                          </div>
+                            </div>
                             
                        </div>
                </div>
