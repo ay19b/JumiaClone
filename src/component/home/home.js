@@ -1,52 +1,33 @@
-import React, { useEffect, useState } from "react";
-import './home.css'
-import Header from '../header/header'
-import Categorys from '../category/categorys'
+import { Typography ,Grid,Container} from '@material-ui/core'
+import Nav from '../navbar/nav'
+import React from 'react'
+import Carousel from '../carousel/carousel'
 import SideBar from '../sideBar/sideBar'
-import Slide from '../slide/slide'
-import Pillars from '../pillars/pillars'
-import Footer from "../footer/footer"
-import ReactLoading from "react-loading";
+import Footer from '../footer/footer'
+import Pillars from "../pillars/pillars";
+import Categorys from '../category/categorys'
+import useStyles from './style';
+import Layout from '../Layout'
 
-export default function Home() {
-    const [done, setDone] = useState(undefined);
-
-    const Data=()=>{
-
-        return(
-        <div className="home">
-          <Header />
-          <SideBar />
-          <Slide />
-          <Pillars />
-          <Categorys />
-          <Footer />
-        </div>
-        )
-    }
-    useEffect(() => {
-        setTimeout(() => {
-          <data />
-          setDone(true);
-        }, 2500);
-      }, []);
-    return (
-
-    <>
-      {!done ? (
-        <ReactLoading
-          type={"bubbles"}
-          color={"orange"}
-          height={600}
-          width={400}
-          className={'loader'}
-        />
-      ) : (
-           
-              <Data />
-            
-      )}
-    </>
-
-    )
+const Home=()=>{
+    const classes = useStyles();
+  return (
+  
+    <Layout show='true'>
+        <Container>
+            <Grid container spacing={3}>
+                <Grid item md={3} className={classes.side}>
+                    <SideBar />
+                </Grid>
+                <Grid item md={9} xs={12}>
+                    <Carousel />
+                </Grid>
+            </Grid>
+        </Container>
+        <Pillars/>
+        <Categorys/>
+    </Layout>
+    
+  )
 }
+export default Home

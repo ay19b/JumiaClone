@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react'
-import './detailProd.css'
 import { useParams} from 'react-router-dom';
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {AiOutlineStar} from 'react-icons/ai'
@@ -8,14 +7,21 @@ import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
 import {add} from "../../features/productSlice"
+import useStyles from './style';
+import {Grid,Container,Typography,Button,Divider} from '@material-ui/core';
+import Rating from '@material-ui/lab/Rating';
+import {Link} from 'react-router-dom';
+import Layout from '../Layout'
+
 
 export default function DetailProd() {
+  const classes = useStyles();
   const [count, setCount] = useState(0);
   const prod = useSelector(SelectProduct);
   const dispatch = useDispatch();
   const { id } = useParams();
   const product = prod[id-1];
-
+  
   
   useEffect(() => {
     setCount(JSON.parse(window.localStorage.getItem('count')));
@@ -24,27 +30,45 @@ export default function DetailProd() {
     window.localStorage.setItem('count', count);
   }, [count]);
   
-  
-  let iconFull= <AiFillStar style={{color:"orange"}}/>
-  const starEmpty = iconFull -5;
-  let iconEmpty= <AiOutlineStar />;
-
-
     return (
-               <div className="detail" key={product.id}>        
-                       <div className="detail-prod" >
-                            <img src={product.image} />
-                            <div className="inf-prod">
-                               <h2>{product.desc}</h2>
-                               <h3>mark: <span>{product.product}</span></h3>
-                               <div className="star">
-                                  {iconFull}{iconFull}{iconFull}{iconEmpty}
-                               </div>
-                               <span>{product.price} DA</span>
-                               <button className="btn-add" onClick={() => dispatch(add(product))}><HiOutlineShoppingCart />I BUY</button>
-                            </div>
+        <Layout>
+               <div className={classes.detail}> 
+                 <Container>  
+                 <div className={classes.linkPages}>
+	                  
+				            <Typography variant='body2' className={classes.link}>
+                      <Link to="/">Home</Link>
+                    </Typography> 			
+			          	  
+                    <Typography variant='body2'className={classes.link}>></Typography>
+                    
+				            <Typography variant='body2' className={classes.link}>
+                      <Link to={`/${product.category}`}>{product.category}</Link>
+                    </Typography> 			
+			          	  
+                    <Typography variant='body2'className={classes.link}>></Typography>
+			              <Typography variant='body2'className={classes.link}>detailProd</Typography>
+			          </div>   
+                       <Grid container spacing={2} className={classes.detailCont}>
+                         <Grid item xs={4}>
+                           <img src={product.image} className={classes.img}/>
+                         </Grid>
+                         <Grid item xs={4} >
+                               <Typography variant='h5'>{product.desc}</Typography>
+                               <Typography variant='h6' className={classes.mark}>mark: <Typography variant='h6'>{product.product}</Typography></Typography>
+                               <Rating name="half-rating-read" defaultValue={3.5} precision={0.5} readOnly />
+                               
+                               
+                               <Typography variant='h5'>{product.price} DA</Typography>
+                               <Button variant="contained" className={classes.btnAdd}onClick={() => dispatch(add(product))}>
+                                 <Typography variant='subtitle1'><HiOutlineShoppingCart />I BUY</Typography>
+                               </Button>
+                               
+                         </Grid>   
                             
-                       </div>
+                       </Grid>
+                 </Container>      
                </div>
+          </Layout>     
     )
 }

@@ -1,36 +1,50 @@
 import React from 'react'
-import './footer.css'
 import Log from '../../images/log.png'
 import Ban from '../../images/ban.jpg'
+import useStyles from './style';
+import {HiSearch} from "react-icons/hi";
+import { Grid ,Container, Typography,TextField,InputAdornment,Button} from '@material-ui/core';
 
-
-export default function Footer() {
-    return (
-        <div className="footer">
-            <div className="item-footer">
-                <img src={Log} />
-            </div>
-            <div className="item-footer">
-                <h3>NEW TO JUMIA?</h3>
-                <span>Subscribe to our communications to receive our best offers!</span>
+const Footer=()=> {
+const classes = useStyles();
+  return (
+    <div className={classes.footer}>
+     <Container>
+      <Grid container alignItems="center">
+        <Grid item md={3} xs={4}>
+          <img src={Log} className={classes.imgLogo}/>
+        </Grid>
+        <Grid item md={6} xs={8} className={classes.ftCenter} >
+                <Typography variant='h6' color='secondary'>NEW TO JUMIA?</Typography>
+                <Typography style={{color:"#aaa"}}>Subscribe to our communications to receive our best offers!</Typography>
                 <div className="input-inf">
-                    <div className="input">
-                      <i className="fas fa-envelope"></i>
-                      <input placeholder="Enter"/>
-                    </div>
-                    <div className="btns">
-                      <button>MEN</button>
-                      <button>WOMEN</button>
-                    </div>
-                    
+                  <div className={classes.input}>
+                    <TextField
+                      id="outlined-basic"
+                      placeholder="Enter"
+                      InputProps={{
+                      startAdornment: <InputAdornment position="start">
+                                        <HiSearch color='primary'/>
+                                      </InputAdornment>,         
+                      }}
+                    />
+                      <Button variant="outlined" className={classes.btn}>MEN</Button>
+                      <Button variant="outlined" className={classes.btn}>WOMEN</Button>
+                  </div>
                 </div>
-            </div>
-            
-              <div className="item-footer">
-                  <img src={Ban} />
-                  <h3>JUMIA IN YOUR POCKET!</h3>
-                  <span>Download our free app</span>
-              </div>
-        </div>
-    )
+        </Grid>
+        <Grid item md={3} className={classes.lastGrid}>
+          <div style={{display:'flex'}}>
+            <img src={Ban} className={classes.img}/>
+            <Typography variant='h6' className={classes.text}color='secondary'>JUMIA IN YOUR POCKET!</Typography>
+          </div>
+          <Typography variant='h6'className={classes.text} style={{color:"#aaa"}} >Download our free app</Typography>
+        </Grid>
+      </Grid>
+    </Container>
+  </div>  
+  )
 }
+
+export default Footer
+

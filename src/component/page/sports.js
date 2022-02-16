@@ -1,12 +1,13 @@
 import React from 'react'
 import PageCategory from '../pageCategory/pageCategory'
 
-const Beauty=()=> {
+const Sport=()=> {
+   
     return (
       <>
-         <PageCategory catg="Health beauty"/>
-      </>          
+        <PageCategory catg="Sports"/>
+      </>  
             
     )
 }
-export default Beauty;
+export default Sport;

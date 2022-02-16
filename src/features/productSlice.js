@@ -3,7 +3,7 @@ import Data from '../Library/stock';
 
 export const productSlice = createSlice({
   name: 'product',
-  initialState: Data,
+  initialState: {},
   
   
   reducers: {

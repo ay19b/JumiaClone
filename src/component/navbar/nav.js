@@ -1,0 +1,141 @@
+import React,{useState,useRef,useEffect} from 'react';
+import {Typography, Container,Grid,Badge,Button,InputAdornment,FormControl,TextField} from '@material-ui/core'
+import {SelectProduct} from '../../features/productSlice';
+import {useSelector} from "react-redux";
+import Banner from "../../images/Banner.jpg";
+import flag from "../../images/flag.png";
+import france from "../../images/france.png";
+import logo from "../../images/logo.png";
+import Avatar from 'react-avatar';
+import {GiAlliedStar} from "react-icons/gi";
+import {HiSearch,HiOutlineShoppingCart,HiMenu} from "react-icons/hi";
+import {BsFillPersonFill} from "react-icons/bs";
+import {TiShoppingCart} from "react-icons/ti";
+import {RiArrowDropDownLine,RiShoppingCart2Line} from 'react-icons/ri';
+import {IoMdHelpCircleOutline} from "react-icons/io";
+import {Link} from 'react-router-dom';
+import {Head} from "../data";
+import {Side} from "../data";
+import useStyles from './style';
+import classNames from 'classnames';
+import SideBar from '../sideBar/sideBar';
+
+const Nav=({show})=> {
+    const classes = useStyles();
+    const [navbar, setNavbar] = useState(false);
+    const [clicked,setClicked]=useState(false);
+    const product = useSelector(SelectProduct)
+    const cartProducts = product.filter((product) => product.added);
+    const linksRef = useRef(null);
+    const [ShowSidebar, setShowSidebar] = useState(false);
+    const fixedNav=()=>{
+      if(window.scrollY>=100){
+        setNavbar(true)
+      }else{
+        setNavbar(false)
+      }
+    }
+  
+  useEffect(() => {
+    fixedNav()
+    window.addEventListener('scroll',fixedNav)  
+  })
+   
+
+  return (
+    <section className={classes.header}>
+
+        <div className={classes.headerFirst}>
+            <img src={Banner} className={classes.img}/>
+        </div>
+        <div className={classes.headerSecond}>
+          <Container>
+            <Grid container>
+              <Grid item md={6} xs={6} className={classes.headerLeft}>
+                   <Typography variant='subtitle2'><GiAlliedStar /></Typography>
+                   <Typography variant='subtitle2'>Sell ​​on Jumia</Typography>
+              </Grid>
+              <Grid item md={6} xs={6} className={classes.headerRight}>
+                    <div className={classes.lang}>
+                        <Avatar src={france} size="20" round="20px" />
+                        <Typography variant='subtitle2'>francais</Typography>
+                     </div>
+                     <div className={classes.lang}>
+                        <Avatar src={flag} size="20" round="20px" /> 
+                        <Typography variant='subtitle2'>العربية</Typography>
+                     </div>
+              </Grid>
+            </Grid>
+          </Container>    
+        </div>
+        <div className={!navbar?classes.headerLast:classes.navActive} >
+          <Container>
+              <Grid container >
+                <Grid item md={3} sm={2} xs={3} className={classes.logoPart}>
+                  <Typography variant='h4'>
+                    <HiMenu className={!show?classes.menu:classes.menuDis} onClick={()=>setShowSidebar(!ShowSidebar)}/>
+                  </Typography>
+                  <Link to="/"><img src={logo} className={classes.imgLogo}/></Link>
+                </Grid>
+                <Grid item md={4} sm={6} xs={6} className={classes.searchPart}>
+                  <TextField
+                   className={classes.searchBar}
+                   id="outlined-basic"
+                   placeholder="search"
+                   InputProps={{
+                   startAdornment: <InputAdornment position="start">
+                                      <HiSearch className={classes.searchIcon}/>
+                                   </InputAdornment> 
+                   }} 
+
+                  />
+                  <Button variant="contained" className={classes.btnSearch}>SEARCH</Button>
+                </Grid>
+                <Grid item md={5} sm={3} xs={3} className={classes.info}>
+                  <Typography variant='h6' className={classes.infoItem}>
+                    <BsFillPersonFill className={classes.iconNav}/>
+                    Login
+                    <RiArrowDropDownLine/>
+                  </Typography>
+                  <Typography variant='h6' className={classes.infoItem}>
+                    <IoMdHelpCircleOutline className={classes.iconNav}/>Help<RiArrowDropDownLine/>
+                  </Typography>
+                  <Typography variant='h6' className={classes.infoItem}>
+                    <Link to="/basket" className={classes.link}> 
+                     <Badge badgeContent={cartProducts.length} color="primary" className={classes.iconNav}>
+                       <TiShoppingCart />
+                     </Badge>
+                     Basket
+                 
+                     </Link>
+                   </Typography>
+                </Grid>
+              </Grid> 
+              <div className={ShowSidebar?classNames(classes.sideBar, classes.active):classes.sideBar}onMouseLeave={()=>setShowSidebar(!ShowSidebar)} > 
+                   {Side.map((item)=>{
+                     const {id,name,icon,path}= item;
+                     return(
+
+                        <Link to={path} key={id} onClick={()=>setShowSidebar(!ShowSidebar)}>
+                         <div key={id} className={classes.sidebarItem}>
+                          <Typography variant='h6'>{icon}</Typography>
+                          <Typography variant='subtitle2' className={classes.name}>{name}</Typography>
+                         </div>
+                        </Link>
+
+                          )
+                    })}
+              </div>    
+          </Container>
+          
+            
+        </div>
+        
+        
+        
+        
+    </section>
+  )
+}
+
+export default Nav

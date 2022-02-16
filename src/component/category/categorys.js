@@ -1,6 +1,5 @@
 import React from 'react'
 import Category from './category'
-import "./categorys.css"
 
 const Categories=()=> {
     return(

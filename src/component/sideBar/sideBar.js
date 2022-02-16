@@ -1,23 +1,23 @@
 import React from 'react';
 import {Side} from "../data";
-import './sideBar.css';
+import useStyles from './style';
+import {Typography} from '@material-ui/core'
 import {Link} from 'react-router-dom';
+import classNames from 'classnames';
 
-function SideBar() {
-  
+function SideBar({ShowSidebar}) {
+    const classes = useStyles();
     return(
-      <div className="sidebar"> 
+      <div className={classes.sideBar}> 
           {Side.map((item)=>{
               const {id,name,icon,path}= item;
-              return(
-                
-                 <Link to={path} key={id}>
-                   <div key={id} className="sidebar-item">
-                   <span>{icon}</span>
-                  <h3>{name}</h3>
-                  </div>
-                    </Link>
-                 
+              return(   
+                <Link to={path} key={id}>          
+                   <div key={id} className={classes.sidebarItem}>
+                     <Typography variant='h6'>{icon}</Typography>
+                     <Typography variant='subtitle2' className={classes.name}>{name}</Typography>
+                   </div>
+                </Link>   
               )
           })}
       </div>

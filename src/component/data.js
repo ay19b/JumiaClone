@@ -13,11 +13,9 @@ import {TiShoppingCart} from "react-icons/ti";
 import {IoMdHelpCircleOutline} from "react-icons/io";
 import {RiArrowDropDownLine} from 'react-icons/ri';
 import {RiArrowDropUpLine} from 'react-icons/ri';
-import Food from '../images/jumia_images/JumiaFood.png'
-import Mall from '../images/jumia_images/JumiaMal.png'
-import Prime from '../images/jumia_images/JumiaPrime.png'
 
-export const DataHead=[
+
+export const Head=[
     
     {
         id:1,
@@ -119,30 +117,4 @@ export const Side= [
         icon:<FaAppleAlt />
     },
 ];
-
-
-export  const footerSide = [
-    {
-        id:1,
-        name:"Skin care",
-        img:Prime
-    },
-    {
-        id:2,
-        name:"Official Shops",
-        img:Mall
-    },
-    {
-        id:3,
-        name:"Order Phone",
-        img:Prime
-    },
-    {
-        id:4,
-        name:"Jumia Food",
-        img:Food
-    },
-]
-
-
 
