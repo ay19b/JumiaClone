@@ -32,6 +32,8 @@ export const theme = createTheme({
           root:{
            backgroundColor:'white !important'
           }
-        }
-      } 
+        },
+        
+        
+      }
 });   

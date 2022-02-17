@@ -19,17 +19,15 @@ a{
   text-decoration:none;
   color:black;
 }
-.MuiInputBase-inputMarginDense {
-  text-align: center;
-  background-color: whitesmoke !important;
-}
-.MuiInput-underline::before{
-	border-bottom: none !important;
-}
 .MuiButton-root{
 	min-width: 25px !important;
-
 }
 .MuiInput-underline-181::before {
   display:none !important;
+}
+@media screen and (max-width:400px){
+  .MuiOutlinedInput-inputMarginDense-1809{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
 }

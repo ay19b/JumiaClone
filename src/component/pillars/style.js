@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     pillItem :{
         display: 'flex',
         height: '4rem',
-        justifyContent: 'space-evenly',
         alignItems: 'center',
         backgroundColor: 'white',
         border: '4px solid whitesmoke',
@@ -17,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("xs")]: {
 			display:'none',
 		},
+    },
+    item:{
+        marginLeft:'3%',
     },
     img:{
         height:'100%'

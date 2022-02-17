@@ -13,7 +13,6 @@ import Rating from '@material-ui/lab/Rating';
 import {Link} from 'react-router-dom';
 import Layout from '../Layout'
 
-
 export default function DetailProd() {
   const classes = useStyles();
   const [count, setCount] = useState(0);
@@ -50,10 +49,10 @@ export default function DetailProd() {
 			              <Typography variant='body2'className={classes.link}>detailProd</Typography>
 			          </div>   
                        <Grid container spacing={2} className={classes.detailCont}>
-                         <Grid item xs={4}>
+                         <Grid item xs={6}md={4} >
                            <img src={product.image} className={classes.img}/>
                          </Grid>
-                         <Grid item xs={4} >
+                         <Grid item xs={6} md={4} className={classes.infDtl} >
                                <Typography variant='h5'>{product.desc}</Typography>
                                <Typography variant='h6' className={classes.mark}>mark: <Typography variant='h6'>{product.product}</Typography></Typography>
                                <Rating name="half-rating-read" defaultValue={3.5} precision={0.5} readOnly />

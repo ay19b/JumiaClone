@@ -27,7 +27,7 @@ export default function Category({cag,more}) {
                     .map((product)=>{
                       
                         return(
-                           <Grid item md={3} sm={4} xs={12} key={product.id} className={classes.product}>
+                           <Grid item md={3} sm={5} xs={10} key={product.id} className={classes.product}>
                             <Link to={`/product/${product.id}`} key={product.id}>
                               <img src={product.image} className={classes.img}/>
                               <Typography variant='h5'className={classes.prodName}>{product.product}</Typography>

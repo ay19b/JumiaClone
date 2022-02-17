@@ -92,7 +92,7 @@ export const Side= [
         id:8,
         name:"Computer science",
         icon:<HiOutlineDesktopComputer />,
-        path:'/computer',
+        path:'/computing',
     },
     {
         id:9,

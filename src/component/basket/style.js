@@ -58,9 +58,8 @@ const useStyles = makeStyles((theme) => ({
 		height:'100%',
 		animationName: '$scrollList',
         animationDuration: '.4s',
-		[theme.breakpoints.down("md")]: {
-			marginBottom: '3%',
-		},
+		marginBottom: '3%',
+		
 	},
 	listSummery:{
 		backgroundColor:"white",
@@ -69,18 +68,6 @@ const useStyles = makeStyles((theme) => ({
 		height:'100%',
 		position:'sticky',
 		top:'12%',
-		animationName: '$scrollList',
-        animationDuration: '.4s',
-	},
-	'@keyframes scrollList':{
-		'0%' :{
-		  opacity: 0,
-		  transform: 'translateY(-60px)',
-		},
-		'100%' :{
-		  opacity: 1,
-		  transform: 'translateY(0)',
-		},
 	},
 	products:{
 		marginBottom: '0%',

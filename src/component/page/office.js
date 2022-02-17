@@ -5,7 +5,7 @@ const Office=()=> {
    
     return (
         <>
-          <PageCategory catg="Home & office"/>
+          <PageCategory catg="office"/>
         </>        
             
     )

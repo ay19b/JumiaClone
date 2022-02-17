@@ -27,10 +27,25 @@ const useStyles = makeStyles((theme) => ({
     detailCont:{
         backgroundColor:"white",
         alignItems: 'center',
-        marginTop: '1%',
+        marginTop: '2%',
+        marginBottom: '3%',
+        [theme.breakpoints.down("xs")]: {
+			display: 'flex',
+            flexDirection: 'column',
+            textAlign: 'center',
+		},
+    },
+    infDtl:{
+        [theme.breakpoints.down("xs")]: {
+			maxWidth: '100%',
+		},
+        
     },
     mark:{
         display:"flex",
+        [theme.breakpoints.down("xs")]: {
+			justifyContent: 'center',
+		},
     },
     img:{
         width: '100%',

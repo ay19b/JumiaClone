@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '1%',
         color:'white ',
         borderColor:"white",
+        [theme.breakpoints.down("xs")]: {
+            display: 'none',
+        },
     },
     lastGrid:{
         [theme.breakpoints.down("sm")]: {

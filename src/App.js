@@ -21,12 +21,12 @@ import Computer from './component/page/computer';
 
 
 
-let Theme = responsiveFontSizes(theme);
+
 
 function App() {
      
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={responsiveFontSizes(theme, { breakpoints: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'], factor: 5 })}>
     <div className="App">
     <BrowserRouter basename={process.env.PUBLIC_URL}>
           <>
@@ -40,7 +40,7 @@ function App() {
               <Route  path={'/appliance'} component={Appliance}><Appliance /></Route>
               <Route  path={'/Sports'} component={Sport}><Sport /></Route>
               <Route  path={'/telephone'} component={Telephone}><Telephone /></Route>
-              <Route  path={'/computer'} component={Computer}><Computer /></Route>
+              <Route  path={'/computing'} component={Computer}><Computer /></Route>
               <Route  path={'/basket'} component={Basket}><Basket /></Route>
               <Route  path={'/product/:id'} component={DetailProd}><DetailProd /></Route>  
            </Switch>

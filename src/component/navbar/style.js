@@ -30,9 +30,11 @@ const useStyles = makeStyles((theme) => ({
     headerRight:{
         display: 'flex',
         justifyContent:"flex-end",
+        "&>:nth-child(1)": {
+            marginRight:'3%',
+        },
     },
     lang:{
-        marginRight: '23px',
         fontSize: '0.7rem',
         cursor: 'pointer',
         display: 'flex',
@@ -55,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex:'100',
         top:'0%',
         padding:'1%',
+        boxShadow: '0px 8px 6px -5px rgba(0,0,0,0.65)',
         animationName: '$scrollNav',
         animationDuration: '.4s',
         [theme.breakpoints.down("sm")]: {
@@ -108,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
     btnSearch:{
         backgroundColor:theme.palette.primary.main,
         color:"white",
+        marginLeft: '2%',
         '&:hover':{
             backgroundColor:'orange'
         },
@@ -118,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
     imgLogo:{
         width:'80%',
         [theme.breakpoints.down("sm")]: {
-            width:'70%', 
+            width:'80%', 
         },
         [theme.breakpoints.down("xs")]: {
             width:'100%', 

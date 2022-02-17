@@ -6,7 +6,6 @@ import Layout from '../Layout'
 import useStyles from './style';
 import { Typography , Container, Grid} from "@material-ui/core";
 
-
 const PageCategory=({catg})=> {
     const classes = useStyles();
    const products = useSelector(SelectProduct);
@@ -30,7 +29,7 @@ const PageCategory=({catg})=> {
                 
                   return(
                     
-                  <Grid item md={3} className={classes.product} key={product.id}>
+                  <Grid item md={3} sm={5} xs={12} className={classes.product} key={product.id}>
                     <Link to={`/product/${product.id}`} key={product.id}>
                        <img src={product.image} className={classes.img}/>
                        <h2>{product.product}</h2>

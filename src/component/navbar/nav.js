@@ -75,8 +75,9 @@ const Nav=({show})=> {
                 </Grid>
                 <Grid item md={4} sm={5} xs={5} className={classes.searchPart}>
                   <TextField
-                   className={classes.searchBar}
-                   id="outlined-basic"
+                   id="outlined-hidden-label-small"
+                   size="small"
+                   variant="outlined"
                    placeholder="search"
                    InputProps={{
                    startAdornment: <InputAdornment position="start">

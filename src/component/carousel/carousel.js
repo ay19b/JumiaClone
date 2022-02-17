@@ -10,7 +10,7 @@ function Carousel(){
     const classes = useStyles();
     
     return(
-        <AutoplaySlider play={false}
+        <AutoplaySlider play={true}
         cancelOnInteraction={false} // should stop playing on user interaction
         interval={2000} >
            {Banner.map((item)=>{

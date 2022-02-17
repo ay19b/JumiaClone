@@ -4,7 +4,7 @@ import PageCategory from '../pageCategory/pageCategory'
 const Beauty=()=> {
     return (
       <>
-         <PageCategory catg="Health beauty"/>
+         <PageCategory catg="beauty"/>
       </>          
             
     )

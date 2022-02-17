@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '1%',
+        borderRadius: '5px',
         backgroundColor:theme.palette.primary.blue,
         [theme.breakpoints.down("xs")]: {
 			marginBottom:'4%',
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     headProdRight:{
         display: 'flex',
         alignItems: 'center',
+        color: 'white',
     },
     icon:{
         display: 'flex',

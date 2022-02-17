@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     img:{
         width: '100%',
         height: '70%',
+        [theme.breakpoints.down("xs")]: {
+			width: '75%',
+		},
     },
 
 }));
