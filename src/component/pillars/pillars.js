@@ -11,20 +11,20 @@ const Pillars = () => {
     return (
         <div className={classes.pillars}>
           <Container>
-          <Grid container  spacing={2}>
-                    <Grid item xs={3} className={classes.pillItem}>
+          <Grid container >
+                    <Grid item sm={6}  md={3} className={classes.pillItem}>
                        <img src={Prime} className={classes.img}/>
                        <Typography variant="subtitle1">Skin care</Typography>
                     </Grid>
-                    <Grid item xs={3} className={classes.pillItem}>
+                    <Grid item sm={6}  md={3} className={classes.pillItem}>
                        <img src={Mall} className={classes.img}/>
                        <Typography variant="subtitle1">Official Shops</Typography>
                     </Grid>
-                    <Grid item xs={3} className={classes.pillItem}>
+                    <Grid item sm={6}  md={3} className={classes.pillItem}>
                        <img src={Prime} className={classes.img}/>
                        <Typography variant="subtitle1">Order Phone</Typography>
                     </Grid>
-                    <Grid item xs={3} className={classes.pillItem}>
+                    <Grid item sm={6}  md={3} className={classes.pillItem}>
                        <img src={Food} className={classes.img}/>
                        <Typography variant="subtitle1">Jumia Food</Typography>
                     </Grid>

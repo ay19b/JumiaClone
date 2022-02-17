@@ -1,5 +1,5 @@
 import React,{useState,useRef,useEffect} from 'react';
-import {Typography, Container,Grid,Badge,Button,InputAdornment,FormControl,TextField} from '@material-ui/core'
+import {Typography, Container,Grid,Badge,Button,InputAdornment,TextField} from '@material-ui/core'
 import {SelectProduct} from '../../features/productSlice';
 import {useSelector} from "react-redux";
 import Banner from "../../images/Banner.jpg";
@@ -8,25 +8,21 @@ import france from "../../images/france.png";
 import logo from "../../images/logo.png";
 import Avatar from 'react-avatar';
 import {GiAlliedStar} from "react-icons/gi";
-import {HiSearch,HiOutlineShoppingCart,HiMenu} from "react-icons/hi";
+import {HiSearch,HiMenu} from "react-icons/hi";
 import {BsFillPersonFill} from "react-icons/bs";
 import {TiShoppingCart} from "react-icons/ti";
-import {RiArrowDropDownLine,RiShoppingCart2Line} from 'react-icons/ri';
+import {RiArrowDropDownLine} from 'react-icons/ri';
 import {IoMdHelpCircleOutline} from "react-icons/io";
 import {Link} from 'react-router-dom';
-import {Head} from "../data";
 import {Side} from "../data";
 import useStyles from './style';
 import classNames from 'classnames';
-import SideBar from '../sideBar/sideBar';
 
 const Nav=({show})=> {
     const classes = useStyles();
     const [navbar, setNavbar] = useState(false);
-    const [clicked,setClicked]=useState(false);
     const product = useSelector(SelectProduct)
     const cartProducts = product.filter((product) => product.added);
-    const linksRef = useRef(null);
     const [ShowSidebar, setShowSidebar] = useState(false);
     const fixedNav=()=>{
       if(window.scrollY>=100){
@@ -50,7 +46,7 @@ const Nav=({show})=> {
         </div>
         <div className={classes.headerSecond}>
           <Container>
-            <Grid container>
+            <Grid container spacing={2}>
               <Grid item md={6} xs={6} className={classes.headerLeft}>
                    <Typography variant='subtitle2'><GiAlliedStar /></Typography>
                    <Typography variant='subtitle2'>Sell ​​on Jumia</Typography>
@@ -70,14 +66,14 @@ const Nav=({show})=> {
         </div>
         <div className={!navbar?classes.headerLast:classes.navActive} >
           <Container>
-              <Grid container >
-                <Grid item md={3} sm={2} xs={3} className={classes.logoPart}>
+              <Grid container spacing={2}>
+                <Grid item md={3} sm={4} xs={5} className={classes.logoPart}>
                   <Typography variant='h4'>
                     <HiMenu className={!show?classes.menu:classes.menuDis} onClick={()=>setShowSidebar(!ShowSidebar)}/>
                   </Typography>
                   <Link to="/"><img src={logo} className={classes.imgLogo}/></Link>
                 </Grid>
-                <Grid item md={4} sm={6} xs={6} className={classes.searchPart}>
+                <Grid item md={4} sm={5} xs={5} className={classes.searchPart}>
                   <TextField
                    className={classes.searchBar}
                    id="outlined-basic"
@@ -91,7 +87,7 @@ const Nav=({show})=> {
                   />
                   <Button variant="contained" className={classes.btnSearch}>SEARCH</Button>
                 </Grid>
-                <Grid item md={5} sm={3} xs={3} className={classes.info}>
+                <Grid item md={5} sm={3} xs={2} className={classes.info}>
                   <Typography variant='h6' className={classes.infoItem}>
                     <BsFillPersonFill className={classes.iconNav}/>
                     Login
@@ -105,8 +101,8 @@ const Nav=({show})=> {
                      <Badge badgeContent={cartProducts.length} color="primary" className={classes.iconNav}>
                        <TiShoppingCart />
                      </Badge>
-                     Basket
-                 
+                     
+                     <Typography variant='h6'className={classes.basketItem}>Basket</Typography>
                      </Link>
                    </Typography>
                 </Grid>
@@ -126,14 +122,8 @@ const Nav=({show})=> {
                           )
                     })}
               </div>    
-          </Container>
-          
-            
+          </Container> 
         </div>
-        
-        
-        
-        
     </section>
   )
 }

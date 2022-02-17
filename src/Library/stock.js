@@ -230,7 +230,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
 	   
 	   {
         id: 16,
-         "category":"Health beauty",
+         "category":"beauty",
          "product": "TEETH WHITENING POWDER ",
          "image": Powder,
          "desc": "TEETH WHITENING POWDER Kit Teeth Whitening with Vegetable Charcoal + Tooth Brush -Blue",
@@ -241,7 +241,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 17,
-         "category":"Health beauty",
+         "category":"beauty",
          "product": "oral",
          "image": oral,
          "desc": "ORAL-B Pro-Expert Multi-Protection Mouthwash - 250Ml",
@@ -252,7 +252,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 18,
-         "category":"Health beauty",
+         "category":"beauty",
          "product": "phyto herbs",
          "image": phyto,
          "desc": "phyto herbs Gélules De Curcuma 951 Phytoherbs",
@@ -263,7 +263,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 19,
-         "category":"Health beauty",
+         "category":"beauty",
          "product": "Ceinture Correcteur",
          "image": Ceinture,
          "desc": "Ceinture Correcteur Réglable De Posture Dos - Epine Dorsale - Noir",
@@ -274,7 +274,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 20,
-         "category":"Health beauty",
+         "category":"beauty",
          "product": "Fingertip Pulse",
          "image": Fingertip,
          "desc": "Fingertip Pulse Oxymètre De Pouls Moniteur De La Fréquence Cardiaque -Bleu",
@@ -344,7 +344,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
 	   
       {
         id: 26,
-         "category":"Phones and Tablets",
+         "category":"telephone",
          "product": "Earphones ",
          "image": earphones,
          "desc": "Generic Bluetooth Wireless Earphones With Charging Case",
@@ -355,7 +355,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 27,
-         "category":"Phones and Tablets",
+         "category":"telephone",
          "product": "I phone 12",
          "image": iphone,
          "desc": "I phone 11 pro 2017 8gb ram 168 HD memory",
@@ -368,7 +368,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
 
        {
          id: 28,
-         "category":"Phones and Tablets",
+         "category":"telephone",
          "product": "Nokia",
          "image": nokia,
          "desc": "Nokia 105 DS'' Dual Sim, FM Radio, Black",
@@ -379,7 +379,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 29,
-         "category":"Phones and Tablets",
+         "category":"telephone",
          "product": "Techno",
          "image": techno,
          "desc": "Tecno Pop 4 - 6.0 2GB RAM 5000mAh - Green",
@@ -390,7 +390,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
        },
        {
          id: 30,
-         "category":"Phones and Tablets",
+         "category":"telephone",
          "product": "Tablet",
          "image": tablet,
          "desc": "Note 4 Plus 4G LTE Tablet 4GB RAM 64GB Dual Sim",
@@ -399,9 +399,6 @@ import Titanium from "../images/appliance/Titanium.jpg";
          "quantity": 0,
         "added": false,
        },
-
-
-
        {
         id: 31,
          "category":"appliance",
@@ -446,7 +443,17 @@ import Titanium from "../images/appliance/Titanium.jpg";
          "quantity": 0,
         "added": false,
        },
-       
+       {
+        id: 35,
+        "category":"appliance",
+        "product": "Samsung",
+        "image": tv2,
+        "desc": "Samsung 55'', Smart LED TV, Curve UHD TV4K - Black",
+        "price": 5500000,
+        "star": 3,
+        "quantity": 0,
+       "added": false,
+      },
 
 
 

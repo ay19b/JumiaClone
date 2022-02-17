@@ -47,12 +47,14 @@ const useStyles = makeStyles((theme) => ({
     },
     
     navActive:{
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
         position:'fixed',
         backgroundColor:'white',
         zIndex:'100',
         top:'0%',
         padding:'1%',
-        width:'100%',
         animationName: '$scrollNav',
         animationDuration: '.4s',
         [theme.breakpoints.down("sm")]: {
@@ -109,13 +111,16 @@ const useStyles = makeStyles((theme) => ({
         '&:hover':{
             backgroundColor:'orange'
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down("sm")]: {
             display:'none',
         },
     },
     imgLogo:{
         width:'80%',
         [theme.breakpoints.down("sm")]: {
+            width:'70%', 
+        },
+        [theme.breakpoints.down("xs")]: {
             width:'100%', 
         },
     },
@@ -150,13 +155,17 @@ const useStyles = makeStyles((theme) => ({
             color: theme.palette.primary.main,
         }
     },
-    
     link:{
         display: 'flex',
         alignItems: 'center',
         '&:hover':{
             color: theme.palette.primary.main,
         }
+    },
+    basketItem:{
+        [theme.breakpoints.down("xs")]: {
+            display:'none',
+        },
     },
     iconNav:{
         marginRight: '6%',
