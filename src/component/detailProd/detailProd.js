@@ -13,6 +13,7 @@ import Rating from '@material-ui/lab/Rating';
 import {Link} from 'react-router-dom';
 import Layout from '../Layout'
 
+
 export default function DetailProd() {
   const classes = useStyles();
   const [count, setCount] = useState(0);

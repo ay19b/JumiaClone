@@ -5,6 +5,7 @@ import {SelectProduct} from '../../features/productSlice'
 import { Typography , Container, Grid} from "@material-ui/core";
 import useStyles from './style';
 
+
 export default function Category({cag,more}) {
    const products = useSelector(SelectProduct);
    const classes = useStyles();

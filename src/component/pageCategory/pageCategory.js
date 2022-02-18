@@ -6,6 +6,7 @@ import Layout from '../Layout'
 import useStyles from './style';
 import { Typography , Container, Grid} from "@material-ui/core";
 
+
 const PageCategory=({catg})=> {
     const classes = useStyles();
    const products = useSelector(SelectProduct);

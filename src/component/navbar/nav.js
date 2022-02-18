@@ -1,4 +1,4 @@
-import React,{useState,useRef,useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import {Typography, Container,Grid,Badge,Button,InputAdornment,TextField} from '@material-ui/core'
 import {SelectProduct} from '../../features/productSlice';
 import {useSelector} from "react-redux";
@@ -17,6 +17,7 @@ import {Link} from 'react-router-dom';
 import {Side} from "../data";
 import useStyles from './style';
 import classNames from 'classnames';
+
 
 const Nav=({show})=> {
     const classes = useStyles();

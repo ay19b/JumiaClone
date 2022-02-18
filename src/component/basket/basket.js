@@ -11,6 +11,7 @@ import {MdCancel} from 'react-icons/md'
 import useStyles from './style';
 import Nav from '../navbar/nav';
 import Footer from '../footer/footer';
+import Data from '../../Library/stock'
 import { makeStyles,Typography,Container,Button,Grid,Divider,TextField,Card,FormLabel,FormControl,FormControlLabel,RadioGroup,Radio} from '@material-ui/core'
 
 export default function Basket() {
@@ -64,7 +65,7 @@ export default function Basket() {
                <Typography variant='h5'>Shopping cart ({cartProducts.length} item) </Typography>
                <Divider className={classes.divdr}/>
                <Grid container item  direction="column">      
-           {product.filter((prod)=>prod.added)
+           {cartProducts
                .map((prod)=>{
           if(prod.quantity==0){
               dispatch(remove(prod))

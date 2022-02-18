@@ -430,7 +430,7 @@ import Titanium from "../images/appliance/Titanium.jpg";
          "price": 2590000,
          "star": 3,
          "quantity": 0,
-        "added": false,
+         "added": false,
        },
        {
          id: 34,

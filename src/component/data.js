@@ -53,47 +53,50 @@ export const Side= [
     },
     {
         id:2,
-        name:"Home & office",
-        icon:<HiOutlineOfficeBuilding />,
-        path:'/office',
-    },
-    {
-        id:3,
-        name:"Health beauty",
-        icon:<GiHealthPotion />,
-        path:'/beauty',
-    },
-    
-    {
-        id:4,
         name:"Fashion",
-        icon:<FaAppleAlt />,
+        icon:<GiHealthPotion />,
         path:'/Fashion',
     },
     {
-        id:5,
+        id:3,
         name:"Appliances",
         icon:<FaAppleAlt />,
         path:'/appliance',
     },
     {
-        id:6,
+        id:4,
         name:"Sport stuff",
         icon:<GiMuscleUp />,
         path:'/Sports',
     },
     {
-        id:7,
-        name:"Telephony",
-        icon:<BsPhone />,
-        path:'/telephone',
-    },
-    {
-        id:8,
+        id:5,
         name:"Computer science",
         icon:<HiOutlineDesktopComputer />,
         path:'/computing',
     },
+    {
+        id:6,
+        name:"Home & office",
+        icon:<HiOutlineOfficeBuilding />,
+        path:'/office',
+    },
+    {
+        id:7,
+        name:"Health beauty",
+        icon:<GiHealthPotion />,
+        path:'/beauty',
+    },
+    
+    
+    
+    {
+        id:8,
+        name:"Telephony",
+        icon:<BsPhone />,
+        path:'/telephone',
+    },
+    
     {
         id:9,
         name:"Baby & Childcare",

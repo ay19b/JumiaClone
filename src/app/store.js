@@ -14,14 +14,16 @@ const reducers = combineReducers({
  });
  
  const persistConfig = {
-     key: 'root',
-     storage
- };
- 
- const persistedReducer = persistReducer(persistConfig, reducers);
+  key: 'root',
+  version: 1,
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 export default configureStore({
-  reducer: persistedReducer,
-  devTools: process.env.NODE_ENV !== 'production',
-  middleware: [thunk]
+reducer: persistedReducer,
+devTools: process.env.NODE_ENV !== 'production',
+middleware: [thunk]
 })
+
