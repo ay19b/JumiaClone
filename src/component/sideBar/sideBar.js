@@ -1,5 +1,5 @@
 import React from 'react';
-import {Side} from "../data";
+import {Side} from "./data";
 import useStyles from './style';
 import {Typography} from '@material-ui/core'
 import {Link} from 'react-router-dom';
@@ -15,7 +15,7 @@ function SideBar({ShowSidebar}) {
                 <Link to={path} key={id}>          
                    <div key={id} className={classes.sidebarItem}>
                      <Typography variant='h6'>{icon}</Typography>
-                     <Typography variant='subtitle2' className={classes.name}>{name}</Typography>
+                     <Typography variant='subtitle1' className={classes.name}>{name}</Typography>
                    </div>
                 </Link>   
               )

@@ -4,20 +4,20 @@ import { makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     product:{
-        height: '16rem',
-        margin: '3% auto',
-        textAlign: 'center',
+        height:'15rem',
+        margin: '3% 2% 1% 0%',
         '&:hover':{
             transform: 'scale(1.03,1.03)',
             boxShadow: '0px 0px 9px 0px #ccc',
             outline: 'none',
-        }
+        },
+       
     },
     headProd:{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '1%',
+        padding: '10px',
         borderRadius: '5px',
         backgroundColor:theme.palette.primary.blue,
         [theme.breakpoints.down("xs")]: {
@@ -35,14 +35,16 @@ const useStyles = makeStyles((theme) => ({
     img:{
         width: '100%',
         height: '70%',
-        [theme.breakpoints.down("xs")]: {
-			width: '60%',
-		},
+        
     },
     prodName:{
         textOverflow: 'ellipsis',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
+        marginLeft:'4%',
+    },
+    price:{
+        marginLeft:'4%',
     },
 
 }));

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import Layout from '../Layout'
 import useStyles from './style';
 import { Typography , Container, Grid} from "@material-ui/core";
-
+import Data from '../../Library/stock'
 
 const PageCategory=({catg})=> {
     const classes = useStyles();

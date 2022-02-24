@@ -12,7 +12,7 @@ import {Grid,Container,Typography,Button,Divider} from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import {Link} from 'react-router-dom';
 import Layout from '../Layout'
-
+import Data from '../../Library/stock'
 
 export default function DetailProd() {
   const classes = useStyles();
@@ -20,7 +20,7 @@ export default function DetailProd() {
   const prod = useSelector(SelectProduct);
   const dispatch = useDispatch();
   const { id } = useParams();
-  const product = prod[id-1];
+  const product =prod[id-1];
   
   
   useEffect(() => {

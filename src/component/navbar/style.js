@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         position:'fixed',
         backgroundColor:'white',
+        width: '98%',
         zIndex:'100',
         top:'0%',
         padding:'1%',
@@ -120,9 +121,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     imgLogo:{
-        width:'80%',
+        width:'9rem',
         [theme.breakpoints.down("sm")]: {
-            width:'80%', 
+            width:'7.567rem', 
         },
         [theme.breakpoints.down("xs")]: {
             width:'100%', 
@@ -193,6 +194,7 @@ const useStyles = makeStyles((theme) => ({
     sidebarItem :{
         display:'flex',
         cursor: 'pointer',
+        marginBottom:'4%',
         '&:hover':{
             color: theme.palette.primary.main,
         }

@@ -1,7 +1,7 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
-import Banner from "../bannerData";
+import Banner from "./data";
 import useStyles from './style';
 
 

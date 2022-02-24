@@ -1,5 +1,4 @@
 import React from 'react';
-import {footerSide} from "../data";
 import {Grid,Container,Typography} from '@material-ui/core'
 import useStyles from './style';
 import Food from '../../images/jumia_images/JumiaFood.png'

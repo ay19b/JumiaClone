@@ -4,11 +4,35 @@ import {useSelector } from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
 import { Typography , Container, Grid} from "@material-ui/core";
 import useStyles from './style';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Data from '../../Library/stock'
 
+
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 900 },
+    items: 4
+  },
+  desktop: {
+    breakpoint: { max: 900, min: 600 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 600, min: 300 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 300, min: 0 },
+    items: 1
+  }
+};
 
 export default function Category({cag,more}) {
    const products = useSelector(SelectProduct);
    const classes = useStyles();
+
    return(
           <div className='category'>
               <Container>
@@ -21,24 +45,28 @@ export default function Category({cag,more}) {
                     </div>
                   </Link> 
               </div>
-              <Grid container spacing={3}>
+              <Carousel 
+                 responsive={responsive}
+                 autoPlay={false}
+              >
+              
                  {products
                     .filter((filter) => filter.category === cag)
-                    .slice(0, 4)
                     .map((product)=>{
                       
                         return(
-                           <Grid item md={3} sm={5} xs={10} key={product.id} className={classes.product}>
+                           <div key={product.id} className={classes.product}>
                             <Link to={`/product/${product.id}`} key={product.id}>
                               <img src={product.image} className={classes.img}/>
-                              <Typography variant='h5'className={classes.prodName}>{product.product}</Typography>
-                              <Typography variant='body1'>{product.price} DA</Typography>
+                              <Typography variant='h6'className={classes.prodName}>{product.product}</Typography>
+                              <Typography variant='body1'className={classes.price}>{product.price} DA</Typography>
                             </Link>
-                           </Grid> 
+                           </div> 
                              )
                         })
                      }
-               </Grid>
+               
+              </Carousel>
              </Container>
             </div>
    )

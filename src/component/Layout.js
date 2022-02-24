@@ -5,16 +5,16 @@ import { theme } from '../Library/theme'
 import {ThemeProvider,responsiveFontSizes} from '@material-ui/core';
 
 
-let Theme = responsiveFontSizes(theme);
+
 export default function Layout({children,show }) {
 
   return (
       <>
-      <ThemeProvider theme={Theme}>
+      <ThemeProvider theme={theme}>
        <Nav show={show}/>
 	       {children}
 	     <Footer />
-      </ThemeProvider> 
+       </ThemeProvider>
       </>
   );
 }

@@ -14,7 +14,7 @@ import {TiShoppingCart} from "react-icons/ti";
 import {RiArrowDropDownLine} from 'react-icons/ri';
 import {IoMdHelpCircleOutline} from "react-icons/io";
 import {Link} from 'react-router-dom';
-import {Side} from "../data";
+import {Side} from "./data";
 import useStyles from './style';
 import classNames from 'classnames';
 
@@ -47,7 +47,7 @@ const Nav=({show})=> {
         </div>
         <div className={classes.headerSecond}>
           <Container>
-            <Grid container spacing={2}>
+            <Grid container spacing={1}>
               <Grid item md={6} xs={6} className={classes.headerLeft}>
                    <Typography variant='subtitle2'><GiAlliedStar /></Typography>
                    <Typography variant='subtitle2'>Sell ​​on Jumia</Typography>
@@ -68,13 +68,13 @@ const Nav=({show})=> {
         <div className={!navbar?classes.headerLast:classes.navActive} >
           <Container>
               <Grid container spacing={2}>
-                <Grid item md={3} sm={4} xs={5} className={classes.logoPart}>
+                <Grid item md={3} sm={5} xs={5} className={classes.logoPart}>
                   <Typography variant='h4'>
                     <HiMenu className={!show?classes.menu:classes.menuDis} onClick={()=>setShowSidebar(!ShowSidebar)}/>
                   </Typography>
                   <Link to="/"><img src={logo} className={classes.imgLogo}/></Link>
                 </Grid>
-                <Grid item md={4} sm={5} xs={5} className={classes.searchPart}>
+                <Grid item md={4} sm={4} xs={5} className={classes.searchPart}>
                   <TextField
                    id="outlined-hidden-label-small"
                    size="small"
@@ -117,7 +117,7 @@ const Nav=({show})=> {
                         <Link to={path} key={id} onClick={()=>setShowSidebar(!ShowSidebar)}>
                          <div key={id} className={classes.sidebarItem}>
                           <Typography variant='h6'>{icon}</Typography>
-                          <Typography variant='subtitle2' className={classes.name}>{name}</Typography>
+                          <Typography variant='subtitle1' className={classes.name}>{name}</Typography>
                          </div>
                         </Link>
 

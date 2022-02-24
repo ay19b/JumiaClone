@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { theme } from './Library/theme';
-import {ThemeProvider,responsiveFontSizes} from '@material-ui/core';
+import {ThemeProvider,responsiveFontSizes,createTheme} from '@material-ui/core';
 import Home from "./component/home/home";
 import Basket from './component/basket/basket';
 import DetailProd from './component/detailProd/detailProd'
@@ -19,9 +19,10 @@ import Computer from './component/page/computer';
 
 
 function App() {
-     
+  
   return (
-    <ThemeProvider theme={responsiveFontSizes(theme, { breakpoints: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'], factor: 5 })}>
+    
+    <ThemeProvider theme={theme}>
     <div className="App">
     <BrowserRouter basename={process.env.PUBLIC_URL}>
           <>
@@ -40,7 +41,8 @@ function App() {
           </>
      </BrowserRouter>
     </div>
-    </ThemeProvider> 
+    </ThemeProvider>
+   
   );
 }
 

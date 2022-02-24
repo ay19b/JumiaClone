@@ -15,6 +15,7 @@ import {RiArrowDropDownLine} from 'react-icons/ri';
 import {RiArrowDropUpLine} from 'react-icons/ri';
 
 
+
 export const Head=[
     
     {
@@ -23,10 +24,6 @@ export const Head=[
         icon: <BsFillPersonFill />  ,
         dropDown:<RiArrowDropDownLine />,
         dropUp:<RiArrowDropUpLine />,
-        down:{
-            btn:'LOG IN',
-            create:"create an account", 
-            }
     },
     {
         id:2,
@@ -60,43 +57,39 @@ export const Side= [
     {
         id:3,
         name:"Appliances",
-        icon:<FaAppleAlt />,
+        icon:<FaBaby />,
         path:'/appliance',
     },
     {
         id:4,
-        name:"Sport stuff",
-        icon:<GiMuscleUp />,
-        path:'/Sports',
-    },
-    {
-        id:5,
         name:"Computer science",
         icon:<HiOutlineDesktopComputer />,
         path:'/computing',
     },
     {
+        id:5,
+        name:"Sport stuff",
+        icon:<GiMuscleUp />,
+        path:'/Sports',
+    },
+    {
         id:6,
-        name:"Home & office",
-        icon:<HiOutlineOfficeBuilding />,
-        path:'/office',
-    },
-    {
-        id:7,
-        name:"Health beauty",
-        icon:<GiHealthPotion />,
-        path:'/beauty',
-    },
-    
-    
-    
-    {
-        id:8,
         name:"Telephony",
         icon:<BsPhone />,
-        path:'/telephone',
     },
     
+    {
+        id:7,
+        name:"Home & office",
+        icon:<HiOutlineOfficeBuilding />,
+        
+    },
+    {
+        id:8,
+        name:"Health beauty",
+        icon:<GiHealthPotion />,
+        
+    },
     {
         id:9,
         name:"Baby & Childcare",
@@ -120,4 +113,3 @@ export const Side= [
         icon:<FaAppleAlt />
     },
 ];
-
