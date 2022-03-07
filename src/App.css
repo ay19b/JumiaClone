@@ -26,6 +26,9 @@ a{
   background-color: white;
   margin-bottom: 2%;
 }
+.react-multi-carousel-track {
+  margin: 2% 0% 2% 0% !important;
+}
 .MuiButton-root{
 	min-width: 25px !important;
 }

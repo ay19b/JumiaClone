@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import { useSelector,useDispatch } from "react-redux";
 import {selectTotalAmount} from "../../features/variableSlice"
@@ -7,12 +7,10 @@ import {setTotalAmount} from "../../features/variableSlice"
 import {SelectProduct} from '../../features/productSlice'
 import {TiShoppingCart} from "react-icons/ti";
 import {FaTrash} from "react-icons/fa";
-import {MdCancel} from 'react-icons/md'
 import useStyles from './style';
 import Nav from '../navbar/nav';
 import Footer from '../footer/footer';
-import Data from '../../Library/stock'
-import { makeStyles,Typography,Container,Button,Grid,Divider,TextField,Card,FormLabel,FormControl,FormControlLabel,RadioGroup,Radio} from '@material-ui/core'
+import {Typography,Container,Button,Grid,Divider} from '@material-ui/core'
 
 export default function Basket() {
     const classes = useStyles();
@@ -40,19 +38,19 @@ export default function Basket() {
 
     if(cartProducts.length==0){
       return(
-       <> 
+       <div className={classes.PgEmpty}> 
         <Nav />
         <Container>
         <div className={classes.emptyBasket}>
-          <Typography variant='h2' gutterBottom><TiShoppingCart className={classes.iconEmpty}/></Typography>
-          <Typography variant='h6' gutterBottom>Your basket is empty !</Typography>
-          <Typography variant='subtitle1' gutterBottom>Browse our categories and discover our best offers! </Typography>
+          <Typography variant='h1' ><TiShoppingCart className={classes.iconEmpty}/></Typography>
+          <Typography variant='h5' gutterBottom>Your basket is empty !</Typography>
+          <Typography variant='h6' gutterBottom>Browse our categories and discover our best offers! </Typography>
           <Link to="/"><Button color='primary' variant="contained" style={{color:'white'}}>START YOUR SHOPPING</Button></Link>
         </div>
         </Container>
         <Footer />
         
-       </> 
+       </div> 
       )
     }
       return(

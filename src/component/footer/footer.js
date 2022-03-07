@@ -14,7 +14,7 @@ const classes = useStyles();
         <Grid item md={3} xs={4}>
           <img src={Log} className={classes.imgLogo}/>
         </Grid>
-        <Grid item md={6} xs={8} className={classes.ftCenter} >
+        <Grid item md={7} xs={8} className={classes.ftCenter} >
                 <Typography variant='h6' color='secondary'>NEW TO JUMIA?</Typography>
                 <Typography style={{color:"#aaa"}}>Subscribe to our communications to receive our best offers!</Typography>
                 <div className="input-inf">
@@ -33,12 +33,12 @@ const classes = useStyles();
                   </div>
                 </div>
         </Grid>
-        <Grid item md={3} className={classes.lastGrid}>
+        <Grid item md={2} className={classes.lastGrid}>
           <div style={{display:'flex'}}>
             <img src={Ban} className={classes.img}/>
-            <Typography variant='h6' className={classes.text}color='secondary'>JUMIA IN YOUR POCKET!</Typography>
+            <Typography variant='h6' className={classes.textNI}color='secondary'>JUMIA IN YOUR POCKET!</Typography>
           </div>
-          <Typography variant='h6'className={classes.text} style={{color:"#aaa"}} >Download our free app</Typography>
+          <Typography variant='h6'className={classes.text}>Download our free app</Typography>
         </Grid>
       </Grid>
     </Container>

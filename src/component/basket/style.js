@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
 			margin: '12% 0',
 		},
 	},
+	
     headerCart:{
 		textAlign:'center',
 		padding:'3%',
@@ -27,14 +28,17 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '1%',
         fontWeight: 'bold',
     },
+	PgEmpty:{
+		height:'100vh',
+	},
 	emptyBasket:{
 		display:'flex',
 		alignItems:'center',
 		justifyContent: 'center',
 		flexDirection:'column',
 		backgroundColor:'white',
-		padding:"6% 0%",
-		margin: '5% 0',
+		padding:"8% 0%",
+		margin: '6% 0',
 		textAlign: 'center',
 	},
 	iconEmpty:{

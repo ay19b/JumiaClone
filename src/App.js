@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { theme } from './Library/theme';
-import {ThemeProvider,responsiveFontSizes,createTheme} from '@material-ui/core';
+import {ThemeProvider} from '@material-ui/core';
 import Home from "./component/home/home";
 import Basket from './component/basket/basket';
 import DetailProd from './component/detailProd/detailProd'
@@ -11,11 +11,6 @@ import Fashion from './component/page/fashion';
 import Appliance from './component/page/appliance';
 import Sport from './component/page/sports';
 import Computer from './component/page/computer';
-
-
-
-
-
 
 
 function App() {

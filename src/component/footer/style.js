@@ -5,7 +5,8 @@ import { makeStyles} from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
     footer :{
         backgroundColor: 'black',
-        height:'10rem',
+        
+        padding: '2% 0%',
     },
     imgLogo:{
         width: '100%',
@@ -36,11 +37,16 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     img:{
-        height:'40%',
-        width:'40%'
+        height:'100%',
+        width:'100%'
+    },
+    textNI:{
+        textAlign: 'left',
+        marginLeft: '3%',
     },
     text:{
         textAlign: 'left',
+        color:"#aaa"
     },
 
 }));

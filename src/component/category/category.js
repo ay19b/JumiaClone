@@ -2,11 +2,11 @@ import {RiArrowDropRightLine} from "react-icons/ri"
 import {Link} from 'react-router-dom';
 import {useSelector } from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
-import { Typography , Container, Grid} from "@material-ui/core";
+import { Typography , Container} from "@material-ui/core";
 import useStyles from './style';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Data from '../../Library/stock'
+
 
 
 
