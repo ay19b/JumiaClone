@@ -4,8 +4,8 @@ import { makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
 	basket:{
-		marginTop: '6%',
-        marginBottom: '9%',
+		marginTop: '4%',
+        marginBottom: '7%',
 		[theme.breakpoints.down("xs")]: {
 			margin: '12% 0',
 		},
@@ -185,9 +185,9 @@ const useStyles = makeStyles((theme) => ({
 	shopingCart:{
 		fontSize:'10rem',
 	},
-	divdr:{
+	divider:{
 		width:'100%',
-		margin: '1% auto',
+		margin: '1% 0% !important',
 	},
 }));
 export default useStyles

@@ -61,7 +61,7 @@ export default function Basket() {
            <Grid container spacing={2} justifyContent="space-around">
              <Grid item md={8}  className={classes.listBasket}>
                <Typography variant='h5'>Shopping cart ({cartProducts.length} item) </Typography>
-               <Divider className={classes.divdr}/>
+               <Divider className={classes.divider}/>
                <Grid container item  direction="column">      
            {cartProducts
                .map((prod)=>{
@@ -99,7 +99,7 @@ export default function Basket() {
 				          </div>
                 </Grid> 
               </Grid>
-              <Divider className={classes.divdr}/>
+              <Divider className={classes.divider}/>
             </>
             ) 
            })
@@ -109,9 +109,9 @@ export default function Basket() {
              <Grid item md={3} className={classes.listSummery}>
                
                <Typography variant='h5'>Basket Summary</Typography>
-               <Divider className={classes.divdr}/>
+               <Divider className={classes.divider}/>
                <Typography variant='subtitle1'className={classes.subtotal}>Total items ({cartProducts.length}) <Typography>DA{totalAmount}</Typography></Typography>
-               <Divider className={classes.divdr}/>
+               <Divider className={classes.divider}/>
                <Typography variant="subtitle1" className={classes.subtotal}>Subtotal: <Typography>DA{totalAmount}</Typography> </Typography>
                <Typography variant="body2"className={classes.subtotal}>Delivery costs not included at this stage (non-refundable in case of return)</Typography>
                <Divider />
