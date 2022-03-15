@@ -58,7 +58,7 @@ export default function Category({cag,more}) {
                            <div key={product.id} className={classes.product}>
                             <Link to={`/product/${product.id}`} key={product.id}>
                               <img src={product.image} className={classes.img}/>
-                              <Typography variant='h6'className={classes.prodName}>{product.product}</Typography>
+                              <Typography variant='h6'className={classes.prodName}>{product.product}-{product.desc}</Typography>
                               <Typography variant='body1'className={classes.price}>{product.price} DA</Typography>
                             </Link>
                            </div> 

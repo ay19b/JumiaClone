@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     name:{
-        marginLeft: '5%',
+        marginLeft: '5% !important',
         
     }
 

@@ -168,7 +168,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     basketItem:{
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down("sm")]: {
             display:'none',
         },
     },

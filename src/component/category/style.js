@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         marginLeft:'4%',
+        fontWeight: '600',
     },
     price:{
         marginLeft:'4%',

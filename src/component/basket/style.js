@@ -4,7 +4,8 @@ import { makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
 	basket:{
-		margin: '5% 0',
+		marginTop: '6%',
+        marginBottom: '9%',
 		[theme.breakpoints.down("xs")]: {
 			margin: '12% 0',
 		},

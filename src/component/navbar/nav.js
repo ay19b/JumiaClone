@@ -93,10 +93,10 @@ const Nav=({show})=> {
                   <Typography variant='h6' className={classes.infoItem}>
                     <BsFillPersonFill className={classes.iconNav}/>
                     Login
-                    <RiArrowDropDownLine/>
+                    <RiArrowDropDownLine className={classes.iconNav}/>
                   </Typography>
                   <Typography variant='h6' className={classes.infoItem}>
-                    <IoMdHelpCircleOutline className={classes.iconNav}/>Help<RiArrowDropDownLine/>
+                    <IoMdHelpCircleOutline className={classes.iconNav}/>Help<RiArrowDropDownLine className={classes.iconNav}/>
                   </Typography>
                   <Typography variant='h6' className={classes.infoItem}>
                     <Link to="/basket" className={classes.link}> 

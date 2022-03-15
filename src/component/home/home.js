@@ -30,9 +30,9 @@ const Home=()=>{
         <Category cag="Supermarket" more="/Supermarket"/>
         <Category cag="Fashion" more="/Fashion" />
         <Offer />
+        <Fashmia />
         <Category cag="appliance" more="/appliance"/>
         <Category cag="Sports" more="/Sports"/>
-        <Fashmia />
         <Category cag="computing" more="/computing"/>
     </Layout>
     
