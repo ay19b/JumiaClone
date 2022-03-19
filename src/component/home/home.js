@@ -1,5 +1,6 @@
+import React,{useEffect} from 'react'
+import { useLocation } from "react-router-dom";
 import {Grid,Container} from '@material-ui/core'
-import React from 'react'
 import Carousel from '../carousel/carousel'
 import SideBar from '../sideBar/sideBar'
 import Pillars from "../pillars/pillars";
@@ -12,6 +13,11 @@ import Fashmia from '../fashmia/fashmia';
 
 const Home=()=>{
     const classes = useStyles();
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+      }, [location]);
   return (
   
     <Layout show='true'>

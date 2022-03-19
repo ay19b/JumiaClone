@@ -33,8 +33,35 @@ export const theme = createTheme({
            backgroundColor:'white !important'
           }
         },
+        MuiBadge:{
+          colorPrimary:{
+            color:'white !important',
+            fontWeight:'700',
+        }},
+        MuiBackdrop:{
+          root:{
+            backgroundColor: 'rgba(0, 0, 0, 0.3) !important',
+          }
+        },
+        MuiSnackbar:{
+          anchorOriginTopCenter:{
+            top: '0 !important',
+            right: 'auto',
+            transform: 'none',
+            width:'100% !important',
+          }
+        },
+        MuiSnackbarContent:{
+          root:{
+            backgroundColor: 'rgb(9, 147, 24) !important',
+            minWidth: '100% !important',
+            justifyContent: 'center',
+          }
+        },
       }
 });   
+
+
 
 
 theme.typography.h3 = {

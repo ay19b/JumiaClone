@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     name:{
         marginLeft: '5% !important',
-        
+        fontWeight: '600',
     }
 
 }));

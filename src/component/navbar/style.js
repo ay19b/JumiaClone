@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     },
     searchPart:{
         display: 'flex',
-        justifyContent: 'space-evenly',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     searchBar:{
@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginLeft: '5%',
-        fontWeight: 'bold',
+        fontWeight: '600',
         color: 'black',
         cursor: 'pointer',
         '&:hover':{
@@ -168,6 +168,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     basketItem:{
+        fontWeight: '600',
         [theme.breakpoints.down("sm")]: {
             display:'none',
         },
@@ -175,7 +176,6 @@ const useStyles = makeStyles((theme) => ({
     iconNav:{
         marginRight: '6%',
         fontSize: '150%',
-        
     },
     sideBar:{
         width: '12rem',
@@ -201,7 +201,7 @@ const useStyles = makeStyles((theme) => ({
     },
     name:{
         marginLeft: '5%',
-        fontWeight:'bold',
+        fontWeight:'600',
     }
 }));
 

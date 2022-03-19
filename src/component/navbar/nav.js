@@ -41,7 +41,7 @@ const Nav=({show})=> {
 
   return (
     <section className={classes.header}>
-
+       
         <div className={classes.headerFirst}>
             <img src={Banner} className={classes.img}/>
         </div>
@@ -68,18 +68,18 @@ const Nav=({show})=> {
         <div className={!navbar?classes.headerLast:classes.navActive} >
           <Container>
               <Grid container spacing={2}>
-                <Grid item md={3} sm={5} xs={5} className={classes.logoPart}>
+                <Grid item md={2} sm={5} xs={5} className={classes.logoPart}>
                   <Typography variant='h4'>
                     <HiMenu className={!show?classes.menu:classes.menuDis} onClick={()=>setShowSidebar(!ShowSidebar)}/>
                   </Typography>
                   <Link to="/"><img src={logo} className={classes.imgLogo}/></Link>
                 </Grid>
-                <Grid item md={4} sm={4} xs={5} className={classes.searchPart}>
+                <Grid item md={6} sm={4} xs={5} className={classes.searchPart}>
                   <TextField
                    id="outlined-hidden-label-small"
                    size="small"
                    variant="outlined"
-                   placeholder="search"
+                   placeholder="Search for a product, brand or category"
                    InputProps={{
                    startAdornment: <InputAdornment position="start">
                                       <HiSearch className={classes.searchIcon}/>
@@ -89,7 +89,7 @@ const Nav=({show})=> {
                   />
                   <Button variant="contained" className={classes.btnSearch}>SEARCH</Button>
                 </Grid>
-                <Grid item md={5} sm={3} xs={2} className={classes.info}>
+                <Grid item md={4} sm={3} xs={2} className={classes.info}>
                   <Typography variant='h6' className={classes.infoItem}>
                     <BsFillPersonFill className={classes.iconNav}/>
                     Login
@@ -126,6 +126,7 @@ const Nav=({show})=> {
               </div>    
           </Container> 
         </div>
+        
     </section>
   )
 }

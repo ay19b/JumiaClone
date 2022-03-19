@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { theme } from './Library/theme';
-import {ThemeProvider} from '@material-ui/core';
+import {ThemeProvider,Container} from '@material-ui/core';
 import Home from "./component/home/home";
 import Basket from './component/basket/basket';
 import DetailProd from './component/detailProd/detailProd'
@@ -19,6 +19,7 @@ function App() {
     
     <ThemeProvider theme={theme}>
     <div className="App">
+      
     <BrowserRouter basename={process.env.PUBLIC_URL}>
           <>
                
@@ -31,10 +32,12 @@ function App() {
               <Route  path={'/computing'} component={Computer}><Computer /></Route>
               <Route  path={'/basket'} component={Basket}><Basket /></Route>
               <Route  path={'/product/:id'} component={DetailProd}><DetailProd /></Route>  
+              <Route  path={'/:Id'} component={Basket}><Basket /></Route>  
            </Switch>
               
           </>
      </BrowserRouter>
+     
     </div>
     </ThemeProvider>
    

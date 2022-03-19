@@ -2,7 +2,6 @@
   margin:0;
 }
 .App {
-  
   background-color: #f5f5f5 !important;
   color: #352f2f;
   height: 100vh;
@@ -35,6 +34,41 @@ a{
 .MuiInput-underline-181::before {
   display:none !important;
 }
+.MuiDialogTitle-root h2{
+  display: flex;
+  align-items: center;
+}
+.MuiDialogTitle-root h2 svg{
+  position: absolute;
+  right: 6px;
+  cursor:pointer;
+}
+.makeStyles-btnRemove-28 .MuiButton-label {
+  position: relative;
+}
+.makeStyles-btnRemove-28 .MuiButton-label .MuiButton-startIcon {
+  position: absolute;
+  left: 0;
+}
+.react-multiple-carousel__arrow{
+  display:none;
+}
+.react-multi-carousel-list:hover .react-multiple-carousel__arrow{
+  display:block !important;
+  animation-name: scrollNav;
+  animation-duration: .4s;
+}
+@keyframes scrollNav{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
 @media screen and (max-width:400px){
   .MuiOutlinedInput-inputMarginDense-1809{
     padding-top: 7.5px;

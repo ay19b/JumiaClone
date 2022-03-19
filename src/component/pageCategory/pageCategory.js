@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useLocation } from "react-router-dom";
 import {useSelector } from 'react-redux'
 import {SelectProduct} from '../../features/productSlice'
 import {Link} from 'react-router-dom'
@@ -8,8 +9,13 @@ import { Typography , Container, Grid} from "@material-ui/core";
 import Data from '../../Library/stock'
 
 const PageCategory=({catg})=> {
-    const classes = useStyles();
+   const location = useLocation();
+   const classes = useStyles();
    const products = useSelector(SelectProduct);
+
+   useEffect(() => {
+    window.scrollTo(0,0);
+  }, [location]);
     return (
       <Layout>
         <div className='category'>

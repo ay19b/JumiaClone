@@ -55,10 +55,11 @@ const useStyles = makeStyles((theme) => ({
         color:"white",
         width:"100%",
         marginTop:'10%',
+        fontSize:'1rem',
         '&:hover':{
             backgroundColor:'orange'
         }
-    }
+    },
 
 }));
 

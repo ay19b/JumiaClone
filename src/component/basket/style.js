@@ -185,6 +185,14 @@ const useStyles = makeStyles((theme) => ({
 	shopingCart:{
 		fontSize:'10rem',
 	},
+	btnRemove:{
+		color:'white',
+		backgroundColor:theme.palette.primary.main,
+		width:'100%',
+		'&:hover':{
+			backgroundColor:'#d07f2b'
+		},
+	},
 	divider:{
 		width:'100%',
 		margin: '1% 0% !important',
