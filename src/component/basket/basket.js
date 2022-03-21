@@ -56,7 +56,7 @@ export default function Basket() {
 
   if(cartProducts.length==0){
     return(
-     <div className={classes.PgEmpty}> 
+     <> 
       <Nav />
       <Container>
       <div className={classes.emptyBasket}>
@@ -68,7 +68,7 @@ export default function Basket() {
       </Container>
       <Footer />
       
-     </div> 
+     </> 
     )
   }
     return(

@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
 		padding:"8% 0%",
 		margin: '6% 0',
 		textAlign: 'center',
+		[theme.breakpoints.down("xs")]: {
+			margin: '3rem 0',
+		},
 	},
 	iconEmpty:{
 		color:theme.palette.primary.main,
