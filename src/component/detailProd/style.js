@@ -29,10 +29,15 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginTop: '2%',
         marginBottom: '6%',
+        [theme.breakpoints.down("sm")]:{
+            marginTop: '3rem',
+            marginBottom: '5rem',
+        },
         [theme.breakpoints.down("xs")]: {
 			display: 'flex',
             flexDirection: 'column',
             textAlign: 'center',
+           
 		},
     },
     infDtl:{
@@ -48,7 +53,13 @@ const useStyles = makeStyles((theme) => ({
 		},
     },
     img:{
-        width: '100%',
+        width: '90%',
+        [theme.breakpoints.down("sm")]:{
+            width: '75%',
+        },
+        [theme.breakpoints.down("xs")]:{
+            width: '100%',
+        },
     },
     btnAdd:{
         backgroundColor:theme.palette.primary.main,

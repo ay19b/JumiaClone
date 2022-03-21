@@ -37,7 +37,7 @@ export default function Category({cag,more}) {
           <div className='category'>
               <Container>
               <div className={classes.headProd}>
-                  <Typography variant='h6'>{cag}</Typography>
+                  <Typography variant='h6' className={classes.categoryName}>{cag}</Typography>
                   <Link to={more}>
                     <div className={classes.headProdRight}>
                      <Typography variant='button'>SEE MORE</Typography>

@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
 			marginBottom:'4%',
 		},
     },
+    categoryName:{
+        color: 'black',
+    },
     headProdRight:{
         display: 'flex',
         alignItems: 'center',

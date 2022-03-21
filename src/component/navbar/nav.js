@@ -43,7 +43,7 @@ const Nav=({show})=> {
     <section className={classes.header}>
        
         <div className={classes.headerFirst}>
-            <img src={Banner} className={classes.img}/>
+             <img src={Banner} className={classes.img}/>
         </div>
         <div className={classes.headerSecond}>
           <Container>
