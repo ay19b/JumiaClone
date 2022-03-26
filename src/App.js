@@ -32,7 +32,7 @@ function App() {
               <Route  path={'/computing'} component={Computer}><Computer /></Route>
               <Route  path={'/basket'} component={Basket}><Basket /></Route>
               <Route  path={'/product/:id'} component={DetailProd}><DetailProd /></Route>  
-              <Route  path={'/:Id'} component={Basket}><Basket /></Route>  
+              <Route  path={'/:Id'} component={Basket}><Basket /></Route> 
            </Switch>
               
           </>

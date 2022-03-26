@@ -112,7 +112,7 @@ export default function Basket() {
               </Grid>  
               <Grid item md={4} className={classes.gridQnt}>
                 <div className={classes.quantity}>
-                <Button color='primary' disabled={prod.quantity==0} onClick={() => dispatch(decrementProduct(prod))} variant="contained">-</Button>
+                <Button color='primary' disabled={prod.quantity==1} onClick={() => dispatch(decrementProduct(prod))} variant="contained">-</Button>
                   <Typography className={classes.itemQuant}>{prod.quantity}</Typography>
                   <Button color='primary' disabled={prod.quantity==10} onClick={() => dispatch(incrementProduct(prod))} variant="contained">+</Button>
                 </div>
